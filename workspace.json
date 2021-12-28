@@ -1,4 +1,17 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "clients-browser-admin": "apps/clients/browser/admin",
+    "clients-browser-admin-e2e": "apps/clients/browser/admin-e2e",
+    "clients-browser-app": "apps/clients/browser/app",
+    "clients-browser-app-e2e": "apps/clients/browser/app-e2e",
+    "clients-browser-common-components": "libs/clients/browser/common/components",
+    "common": "libs/common",
+    "server-apis-internal": "apps/server/apis/internal",
+    "server-apis-main": "apps/server/apis/main",
+    "server-common-services": "libs/server/common/services",
+    "server-workers--another-worker": "apps/server/workers/another-worker",
+    "server-workers-someWorker": "apps/server/workers/someWorker",
+    "shell": "apps/shell"
+  }
 }

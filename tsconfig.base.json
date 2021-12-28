@@ -14,7 +14,15 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@foreman/clients-browser-common-components": [
+        "libs/clients/browser/common/components/src/index.ts"
+      ],
+      "@foreman/common": ["libs/common/src/index.ts"],
+      "@foreman/server-common-services": [
+        "libs/server/common/services/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

@@ -1,0 +1,73 @@
+{
+  "root": "apps/clients/browser/admin",
+  "sourceRoot": "apps/clients/browser/admin/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/clients/browser/admin",
+        "index": "apps/clients/browser/admin/src/index.html",
+        "baseHref": "/",
+        "main": "apps/clients/browser/admin/src/main.tsx",
+        "polyfills": "apps/clients/browser/admin/src/polyfills.ts",
+        "tsConfig": "apps/clients/browser/admin/tsconfig.app.json",
+        "assets": [
+          "apps/clients/browser/admin/src/favicon.ico",
+          "apps/clients/browser/admin/src/assets"
+        ],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/clients/browser/admin/src/environments/environment.ts",
+              "with": "apps/clients/browser/admin/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "clients-browser-admin:build",
+        "hmr": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "clients-browser-admin:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/clients/browser/admin/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/clients/browser/admin"],
+      "options": {
+        "jestConfig": "apps/clients/browser/admin/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
