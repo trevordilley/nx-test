@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
+import {HelloService} from "../hello/hello.service";
 
 @Module({
   controllers: [],
-  providers: [],
+  providers: [HelloService],
   exports: [],
 })
-export class BackendCommonModule {}
+export class BackendCommonModule { }

@@ -3,11 +3,12 @@ import NxWelcome from './nx-welcome';
 
 import { Route, Link } from 'react-router-dom';
 import { WebShared } from '@foreman/clients-browser-common-components';
+import {common} from "@foreman/common";
 
 const StyledApp = styled.div`
   // Your style here
 `;
-
+console.log(common())
 export function App() {
   return (
     <StyledApp>

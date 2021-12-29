@@ -44,6 +44,7 @@
       "executor": "@nrwl/web:dev-server",
       "options": {
         "buildTarget": "clients-browser-admin:build",
+        "port": 3001,
         "hmr": true
       },
       "configurations": {
