@@ -1,6 +1,8 @@
 
 
-# Foreman
+# Nx Test
+
+Try out `npx nx run-may --target=serve --all --parallel=7` 
 
 This project was generated using [Nx](https://nx.dev).
 
